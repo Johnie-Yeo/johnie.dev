@@ -1,0 +1,31 @@
+@media ( max-width: 800px ) {
+    .main-wrapper{
+        flex-direction: column;
+    }
+}
+
+.main-wrapper{
+    display: flex;
+}
+
+.main-element{
+    flex: 1;
+}
+.author-info{
+    background-color: #eee;
+    height: 100vh;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    box-shadow: none;
+}

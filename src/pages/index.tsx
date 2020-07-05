@@ -1,11 +1,15 @@
 import React from "react"
+import AuthorInfo from "../components/authorInfo"
+import RecentPosts from "../components/recentPosts"
+import "./index.css"
 
-interface IndexProps {
-  location: Location
-}
-
-const Index = ({ location }: IndexProps) => {
-  return <>Hello World!</>
+const Index = () => {
+  return (
+    <div className="main-wrapper">
+      <AuthorInfo />
+      <RecentPosts />
+    </div>
+  )
 }
 
 export default Index

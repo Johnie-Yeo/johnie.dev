@@ -16,4 +16,7 @@ interface SiteSiteMetadataAuthor {
 
 interface SiteSiteMetadataSocial {
   twitter: string
+  facebook: string
+  github: string
+  instagram: string
 }
