@@ -30,9 +30,14 @@ const Title = styled.div`
 `
 const Excerpt = styled.div`
   font-size: 0.8rem;
+  text-align: left;
+  padding-left: 10px;
+  margin-bottom: 3px;
 `
 const TagList = styled.div`
   font-size: 0.7rem;
+  text-align: left;
+  padding-left: 10px;
 `
 const Tag = styled.span`
   background-color: #b0e0e6;

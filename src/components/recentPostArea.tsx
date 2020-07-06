@@ -23,7 +23,7 @@ const BlogButton = styled.div`
 const RecentPostArea = () => {
   return (
     <div className="main-element">
-      <h1>Recent Postings</h1>
+      <h1 style={{ marginBottom: "80px" }}>Recent Postings</h1>
       <RecentPostList />
       <Link to="/blog">
         <BlogButton>Read More ...</BlogButton>
