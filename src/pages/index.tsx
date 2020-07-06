@@ -1,13 +1,13 @@
 import React from "react"
 import AuthorInfo from "../components/authorInfo"
-import RecentPosts from "../components/recentPosts"
+import RecentPostArea from "../components/recentPostArea"
 import "./index.css"
 
 const Index = () => {
   return (
     <div className="main-wrapper">
       <AuthorInfo />
-      <RecentPosts />
+      <RecentPostArea />
     </div>
   )
 }
