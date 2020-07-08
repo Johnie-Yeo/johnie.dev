@@ -1,14 +1,19 @@
 import React from "react"
 import AuthorInfo from "../components/authorInfo"
 import RecentPostArea from "../components/recentPostArea"
-import "./index.css"
+import styled from "styled-components"
+
+const MainWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`
 
 const Index = () => {
   return (
-    <div className="main-wrapper">
+    <MainWrapper>
       <AuthorInfo />
       <RecentPostArea />
-    </div>
+    </MainWrapper>
   )
 }
 

@@ -54,7 +54,7 @@ const PostingCard = ({ title, excerpt, thumbnail, tags }: PostCardProps) => {
   })
   const path = `/${title}`
   return (
-    <Link to={path}>
+    <Link to={path} style={{ boxShadow: "none" }}>
       <Card>
         <Thumbnail></Thumbnail>
         <Title>{title}</Title>

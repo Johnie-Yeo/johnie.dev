@@ -11,6 +11,17 @@ const AuthorName = styled.div`
   margin-bottom: 3rem;
 `
 
+const AuthorInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+  height: 100vh;
+  padding-top: 3rem;
+  position: sticky;
+  top: 0;
+`
+
 const AuthorInfo = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -39,7 +50,7 @@ const AuthorInfo = () => {
   const { author, social } = data.site.siteMetadata
 
   return (
-    <div className="main-element author-info">
+    <AuthorInfoWrapper>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
@@ -55,7 +66,7 @@ const AuthorInfo = () => {
       />
       <AuthorName>{author.name}</AuthorName>
       <Contact social={social} name={author.name}></Contact>
-    </div>
+    </AuthorInfoWrapper>
   )
 }
 

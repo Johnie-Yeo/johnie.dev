@@ -4,6 +4,12 @@ import { Link } from "gatsby"
 import { rhythm } from "../utils/typography"
 import RecentPostList from "./recentPostList"
 
+const RecentPostAreaWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const BlogButton = styled.div`
   color: black;
   font-size: ${rhythm(2 / 3)};
@@ -22,13 +28,13 @@ const BlogButton = styled.div`
 
 const RecentPostArea = () => {
   return (
-    <div className="main-element">
+    <RecentPostAreaWrapper>
       <h1 style={{ marginBottom: "80px" }}>Recent Postings</h1>
       <RecentPostList />
       <Link to="/blog">
         <BlogButton>Read More ...</BlogButton>
       </Link>
-    </div>
+    </RecentPostAreaWrapper>
   )
 }
 
