@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import Bio from "../components/legacy/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -12,14 +12,18 @@ interface BlogPostTemplateProps {
   location: Location
 }
 
-const BlogPostTemplate = ({ data, pageContext, location } : BlogPostTemplateProps) => {
-  const {frontmatter:{title, description, date}, excerpt, html }  = data.markdownRemark
+const BlogPostTemplate = ({ data, pageContext, location }: BlogPostTemplateProps) => {
+  const {
+    frontmatter: { title, description, date },
+    excerpt,
+    html,
+  } = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={title} description={description || excerpt}/>
+      <SEO title={title} description={description || excerpt} />
       <article>
         <header>
           <h1

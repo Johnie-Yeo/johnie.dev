@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 import RecentPostList from "./recentPostList"
 
 const RecentPostAreaWrapper = styled.div`

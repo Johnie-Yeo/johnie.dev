@@ -1,5 +1,5 @@
 import React from "react"
-import PostInfo from "./postInfo"
+import PostInfo from "../postInfo"
 
 interface PostListProps {
   posts: MarkdownRemarkEdge[]
@@ -13,6 +13,7 @@ const PostList = ({ posts }: PostListProps) => {
 
     return (
       <PostInfo
+        key={currentTitle}
         title={currentTitle}
         slug={slug}
         date={date}

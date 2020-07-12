@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 import Image from "gatsby-image"
 import styled from "styled-components"
 import Contact from "./contact"

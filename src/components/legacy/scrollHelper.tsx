@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 const ScrollHelperWrapper = styled.div`
   position: fixed;

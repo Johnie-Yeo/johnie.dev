@@ -1,20 +1,50 @@
 import React from "react"
-import AuthorInfo from "../components/authorInfo"
-import RecentPostArea from "../components/recentPostArea"
-import styled from "styled-components"
+import { graphql } from "gatsby"
 
-const MainWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-`
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import PostList from "../components/postList"
 
-const Index = () => {
+interface BlogIndexProps {
+  data: QueryData
+  location: Location
+}
+
+const Index = ({ data, location }: BlogIndexProps) => {
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
+
   return (
-    <MainWrapper>
-      <AuthorInfo />
-      <RecentPostArea />
-    </MainWrapper>
+    <Layout location={location} title={siteTitle}>
+      <SEO title="All posts" />
+      <PostList posts={posts} />
+    </Layout>
   )
 }
 
 export default Index
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`

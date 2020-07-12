@@ -8,6 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@types/react-helmet": "^6.0.0",
     "@types/styled-components": "^5.1.0",
     "@types/typography": "^0.16.3",

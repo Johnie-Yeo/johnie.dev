@@ -1,7 +1,7 @@
 import React from "react"
 import ContactButton from "./contactButton"
 import { graphql, useStaticQuery } from "gatsby"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 import Image from "gatsby-image"
 
 interface ContactProps {

@@ -1,5 +1,5 @@
 import React from "react"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 import { Link } from "gatsby"
 
 interface PostInfoProps {
