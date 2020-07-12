@@ -1,6 +1,8 @@
 import React from "react"
 import LayoutHeader from "../layoutHeader"
 import { rhythm } from "../../utils/typography"
+import "../../style/bright-theme.css"
+import "../../style/dark-theme.css"
 
 interface LayoutProps {
   location: Location
