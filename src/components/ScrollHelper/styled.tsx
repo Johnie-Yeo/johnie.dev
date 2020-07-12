@@ -1,4 +1,3 @@
-import React from "react"
 import styled, { keyframes } from "styled-components"
 import { rhythm } from "../../utils/typography"
 
@@ -25,13 +24,4 @@ const ArrowDown = styled.i`
   animation: ${ca3FadeMoveDown} 2s ease-in-out infinite;
 `
 
-const ScrollHelper = () => {
-  return (
-    <ScrollHelperWrapper>
-      <div>scroll down</div>
-      <ArrowDown />
-    </ScrollHelperWrapper>
-  )
-}
-
-export default ScrollHelper
+export { ScrollHelperWrapper, ArrowDown }
