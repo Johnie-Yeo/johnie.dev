@@ -14,24 +14,12 @@ const ThemeButton = () => {
   const theme = useThemeState()
   const dispatch = useThemeDispatch()
 
-  const getTheOtherTheme = (theme: themeData) => {
-    switch (theme) {
-      case themeData.BRIGHT:
-        return themeData.DARK
-      case themeData.DARK:
-        return themeData.BRIGHT
-      default:
-        throw new Error(`Invalid argument ${theme}`)
-    }
-  }
-
   const changeTheme = (event: React.MouseEvent) => {
     dispatch({ type: ThemeActionType.changeThemeMode })
-    const targetTheme = getTheOtherTheme(theme)
-    setTheme(targetTheme)
   }
 
-  const icon = theme === themeData.BRIGHT ? <WbSunnyIcon /> : <Brightness2Icon />
+  setTheme(theme)
+  const icon = theme === themeData.BRIGHT ? <Brightness2Icon /> : <WbSunnyIcon />
 
   return (
     <span onClick={changeTheme} style={{ marginRight: "10px" }}>
