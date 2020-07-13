@@ -22,6 +22,8 @@ interface MarkdownRemarkFrontmatter {
   title: string
   date: MyDate
   description: string
+  tags: string[]
+  thumbnail: ImageSharp
 }
 
 interface MyDate {
