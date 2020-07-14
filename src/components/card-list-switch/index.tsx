@@ -2,6 +2,7 @@ import React from "react"
 import ListAltIcon from "@material-ui/icons/ListAlt"
 import PictureInPictureIcon from "@material-ui/icons/PictureInPicture"
 import { Wrapper } from "./styled"
+import SpeechBubble from "../speechBubble"
 
 interface CardListSwitchProps {
   view: string
@@ -35,6 +36,10 @@ const CardListSwitch = ({ view, setView, viewTheme }: CardListSwitchProps) => {
     }
   }
 
+  const showCardViewDescription = (e: React.MouseEvent) => {}
+
+  const showListViewDescription = (e: React.MouseEvent) => {}
+
   return (
     <Wrapper>
       <ListAltIcon
@@ -42,13 +47,17 @@ const CardListSwitch = ({ view, setView, viewTheme }: CardListSwitchProps) => {
         fontSize={"large"}
         color={getColor(list)}
         onClick={setListView}
+        onMouseOver={showListViewDescription}
       />
+      <SpeechBubble message={"리스트형 뷰로 볼래요"} />
       <PictureInPictureIcon
         className={card}
         fontSize={"large"}
         color={getColor(card)}
         onClick={setCardView}
+        onMouseOver={showCardViewDescription}
       />
+      <SpeechBubble message={"카드형 뷰로 볼래요"} />
     </Wrapper>
   )
 }

@@ -5,4 +5,5 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   padding: 0 20px;
 `
+
 export { Wrapper }
