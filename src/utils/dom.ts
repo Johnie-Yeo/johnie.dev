@@ -1,13 +1,11 @@
-import { themeData } from "../context/ThemeContext"
-
-const setTheme = (theme: themeData) => {
+const setTheme = (theme: string) => {
   const body = getBody()
   switch (theme) {
-    case themeData.BRIGHT:
+    case "BRIGHT":
       removeClass(body, "dark-theme")
       addClass(body, "bright-theme")
       break
-    case themeData.DARK:
+    case "DARK":
       removeClass(body, "bright-theme")
       addClass(body, "dark-theme")
       break

@@ -1,5 +1,5 @@
-import { themeData, ThemeActionType } from "./data"
-import { useThemeState, useThemeDispatch } from "./hooks"
 import { ThemeContextProvider } from "./provider"
+import { THEME } from "./type"
+import { useThemeState, useThemeDispatch } from "./hooks"
 
-export { themeData, ThemeActionType, useThemeDispatch, useThemeState, ThemeContextProvider }
+export { THEME, ThemeContextProvider, useThemeState, useThemeDispatch }

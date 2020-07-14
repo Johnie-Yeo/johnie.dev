@@ -1,7 +1,8 @@
 import { createContext } from "react"
-import { Theme, themeData, ThemeDispatch } from "./data"
+import { THEME, ThemeDispatch } from "./type"
 
-const ThemeStateContext = createContext<Theme>(themeData.BRIGHT)
+const ThemeStateContext = createContext<THEME>(THEME.BRIGHT)
+
 const ThemeDispatchContext = createContext<ThemeDispatch | undefined>(undefined)
 
 export { ThemeStateContext, ThemeDispatchContext }

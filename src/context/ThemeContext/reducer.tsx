@@ -1,17 +1,15 @@
 import { Reducer } from "react"
-import { Theme, Action, ThemeActionType, themeData } from "./data"
+import { THEME, Action } from "./type"
 
-const themeReducer: Reducer<Theme, Action> = (state: Theme, action: Action): Theme => {
+const themeReducer: Reducer<THEME, Action> = (state: THEME, action: Action): THEME => {
   switch (action.type) {
-    case ThemeActionType.changeThemeMode:
-      if (state === themeData.BRIGHT) {
-        return themeData.DARK
-      } else if (state === themeData.DARK) {
-        return themeData.BRIGHT
-      }
+    case THEME.BRIGHT:
+      return THEME.BRIGHT
+    case THEME.DARK:
+      return THEME.DARK
     default:
       throw new Error(`Unexpected action type`)
   }
 }
 
-export { themeData, themeReducer }
+export { themeReducer }

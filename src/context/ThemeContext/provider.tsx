@@ -1,9 +1,11 @@
 import React, { useReducer } from "react"
-import { themeReducer, themeData } from "./reducer"
-import { ThemeDispatchContext, ThemeStateContext } from "./context"
 
-export const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, dispatch] = useReducer(themeReducer, themeData.BRIGHT)
+import { ThemeDispatchContext, ThemeStateContext } from "./context"
+import { themeReducer } from "./reducer"
+import { THEME } from "./type"
+
+const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
+  const [theme, dispatch] = useReducer(themeReducer, THEME.BRIGHT)
 
   return (
     <ThemeDispatchContext.Provider value={dispatch}>
@@ -11,3 +13,5 @@ export const ThemeContextProvider = ({ children }: { children: React.ReactNode }
     </ThemeDispatchContext.Provider>
   )
 }
+
+export { ThemeContextProvider }
