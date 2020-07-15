@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import "./styled"
-import { Title } from "./styled"
+import { Title, PostListBundle } from "./styled"
 import CardListSwitch from "../card-list-switch"
 import PostCardView from "../postCardView"
 import PostListView from "../postListView"
@@ -15,7 +15,7 @@ const PostList = ({ posts }: PostListProps) => {
     card: "Card-View",
     list: "List-View",
   }
-  const [viewState, setViewState] = useState<string>(ViewTheme.card)
+  const [viewState, setViewState] = useState<string>(ViewTheme.list)
 
   const postLists = posts.map(({ node }) => {
     const { slug } = node.fields
@@ -57,7 +57,7 @@ const PostList = ({ posts }: PostListProps) => {
     <>
       <Title>Recent Posts</Title>
       <CardListSwitch view={viewState} setView={setViewState} viewTheme={ViewTheme} />
-      {postLists}
+      <PostListBundle>{postLists}</PostListBundle>
     </>
   )
 }
