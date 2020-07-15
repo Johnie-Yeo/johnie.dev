@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import { rhythm } from "../../utils/typography"
-import { PostListViewArticle, PostListViewHeader, PostListViewSection } from "./styled"
+import { PostListViewArticle, PostDate, PostTitle } from "./styled"
 import Image from "gatsby-image"
+import TagList from "../tagList"
 
 interface PostListViewProps {
   title: string
@@ -24,28 +25,27 @@ const PostListView = ({
   tags,
 }: PostListViewProps) => {
   return (
-    <PostListViewArticle key={slug}>
-      <Image
-        fixed={thumbnail.childImageSharp.fixed}
-        alt={title}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-        }}
-      />
-      <PostListViewHeader>
-        <h3 style={{ marginBottom: rhythm(1 / 4) }}>
-          <Link style={{ boxShadow: `none` }} to={slug}>
-            {title}
-          </Link>
-        </h3>
-        <small>{date}</small>
-      </PostListViewHeader>
-      <PostListViewSection>
-        <p dangerouslySetInnerHTML={{ __html: description || excerpt }} />
-      </PostListViewSection>
-    </PostListViewArticle>
+    <Link to={slug} style={{ boxShadow: `none` }}>
+      <PostListViewArticle key={slug}>
+        <Image
+          fixed={thumbnail.childImageSharp.fixed}
+          alt={title}
+          style={{
+            marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            minWidth: 150,
+          }}
+        />
+
+        <section>
+          <header style={{ marginBottom: rhythm(1 / 2) }}>
+            <PostTitle>{title}</PostTitle>
+            <PostDate>{date}</PostDate>
+          </header>
+          <TagList tagList={tags} />
+        </section>
+      </PostListViewArticle>
+    </Link>
   )
 }
 

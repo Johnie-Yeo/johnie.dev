@@ -1,16 +1,17 @@
 import React from "react"
+
+import { Link } from "gatsby"
+import { rhythm } from "../../utils/typography"
+import Image from "gatsby-image"
+
 import {
   Title,
-  TagList,
-  Tag,
   PostCardViewArticle,
   PostCardViewHeader,
   PostCardViewSection,
   Description,
 } from "./styled"
-import { Link } from "gatsby"
-import { rhythm } from "../../utils/typography"
-import Image from "gatsby-image"
+import TagList from "../tagList"
 
 interface PostCardViewProps {
   title: string
@@ -31,10 +32,6 @@ const PostCardView = ({
   thumbnail,
   tags,
 }: PostCardViewProps) => {
-  const refinedTags = tags.map(tag => {
-    return <Tag key={tag}>{"# " + tag}</Tag>
-  })
-
   return (
     <PostCardViewArticle>
       <Link to={slug} style={{ boxShadow: "none" }}>
@@ -51,8 +48,7 @@ const PostCardView = ({
           <Title>{title}</Title>
         </PostCardViewHeader>
         <PostCardViewSection>
-          <Description>{description}</Description>
-          <TagList>{refinedTags}</TagList>
+          <TagList tagList={tags}></TagList>
         </PostCardViewSection>
       </Link>
     </PostCardViewArticle>

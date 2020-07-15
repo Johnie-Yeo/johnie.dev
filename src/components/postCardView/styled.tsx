@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Card = styled.div`
   display: inline-block;
-  border: 1px solid black;
+
   margin: 1rem;
   color: black;
   &:hover {
@@ -25,24 +25,9 @@ const Excerpt = styled.div`
   padding-left: 10px;
   margin-bottom: 3px;
 `
-const TagList = styled.div`
-  font-size: 0.7rem;
-  text-align: left;
-  padding-left: 10px;
-`
-const Tag = styled.span`
-  background-color: #b0e0e6;
-  padding: 2px;
-  border-radius: 5px;
-  margin-right: 5px;
-  &:hover {
-    color: white;
-  }
-`
 
 const PostCardViewArticle = styled.article`
   display: inline-block;
-  border: 1px solid black;
   margin: 1rem;
   color: black;
   &:hover {
@@ -59,8 +44,6 @@ export {
   Thumbnail,
   Title,
   Excerpt,
-  TagList,
-  Tag,
   PostCardViewArticle,
   PostCardViewHeader,
   PostCardViewSection,
