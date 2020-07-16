@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import TagList from "../components/tagList"
 
 interface BlogPostTemplateProps {
   data: QueryData
@@ -14,7 +15,7 @@ interface BlogPostTemplateProps {
 
 const BlogPostTemplate = ({ data, pageContext, location }: BlogPostTemplateProps) => {
   const {
-    frontmatter: { title, description, date },
+    frontmatter: { title, description, date, tags },
     excerpt,
     html,
   } = data.markdownRemark
@@ -45,6 +46,8 @@ const BlogPostTemplate = ({ data, pageContext, location }: BlogPostTemplateProps
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: html }} />
+        <br />
+        <TagList tagList={tags} size={15} />
         <br />
         <hr
           style={{
@@ -103,6 +106,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
