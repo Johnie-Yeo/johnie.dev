@@ -4,13 +4,7 @@ import { Link } from "gatsby"
 import { rhythm } from "../../utils/typography"
 import Image from "gatsby-image"
 
-import {
-  Title,
-  PostCardViewArticle,
-  PostCardViewHeader,
-  PostCardViewSection,
-  Description,
-} from "./styled"
+import { Title, PostCardViewArticle, PostCardViewHeader, PostCardViewSection } from "./styled"
 import TagList from "../tagList"
 
 interface PostCardViewProps {
