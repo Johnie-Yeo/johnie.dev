@@ -13,7 +13,6 @@ tags: ["BackEnd", "graphql"]
 
 ## GraphQL이란
 
----
 
 [GraphQL 공식문서](https://graphql.org/)에서는 GraphQL을 다음과 같이 정의합니다.
 
@@ -52,7 +51,7 @@ Under-fetching과 Over-fetching에 대해 REST API에서 일어나는 예시를 
 
 예제는 많은 데이터베이스의 예시가 그러하듯 아래와 같은 학사관리 DB를 예로 진행해 보겠습니다.
 
-<p align="center"><img src="content/blog/back-end/graphql/db_model.png" style="width: 70vw; height: auto;"/></p>
+<p align="center"><img src="./db_model.png" style="width: 70vw; height: auto;"/></p>
 
 여기서 이 데이터 베이스의 정보를 서빙하는 REST API가 있다고 가정해 보겠습니다.
 
