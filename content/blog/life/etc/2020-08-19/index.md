@@ -1,6 +1,6 @@
 ---
 title: 2020 08 19 끄적끄적
-date: "2020-04-19T02:12:03.284Z"
+date: "2020-08-19T02:12:03.284Z"
 description: "개발자들은 왜그럴까"
 thumbnail: "../write.jpeg"
 tags: ["life"]
