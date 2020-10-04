@@ -145,7 +145,10 @@ while(compareIndex > 0 && keyword[index] != keyword[compareIndex]){
 
 이 의문을 해결하기 위해 2번째 예시를 살펴보겠습니다.
 
-index가 6일때 해당 while문 속으로 들어오게 됩니다. while문으로 들어왔다는것은 새로 들어온 문자(keyword[index])가 기존의 다음문자(keyword[compareIndex])와 일치하지 않는 것이고 그렇다면 기존에 비교해 놨던 것들을 활용하여 다시 compareIndex의 시작 시점을 설정해줘야 합니다. 여기서는 3글자 3글자는 같았죠. 이 3글자 안에서 prefix와 suffix가 같은 가장 긴 문자열의 길이가 바로 pi[compareIndex-1] 입니다. -1은 인덱스는 0부터 시작하기 때문이죠.
+index가 6일때 해당 while문 속으로 들어오게 됩니다. 
+while문으로 들어왔다는것은 새로 들어온 문자(keyword[index])가 기존의 다음문자(keyword[compareIndex])와 일치하지 않는 것이고 그렇다면 기존에 비교해 놨던 것들을 활용하여 다시 compareIndex의 시작 시점을 설정해줘야 합니다. 
+여기서는 3글자 3글자는 같았죠. 이 3글자 안에서 prefix와 suffix가 같은 가장 긴 문자열의 길이가 바로 pi[compareIndex-1] 입니다. 
+-1을 하는 이유는 아시다시피 배열은 0부터 시작하기 때문이죠.
 
 말이 굉장히 어렵습니다. 다시 한번 말해보자면 index가 5일때는 prefix와 suffix가 일치하는 가장 긴 것이 aba입니다. 근데 조건에 맞지 않아 while문으로 들어왔고 앞에서 prefix의 prefix와 suffix의 suffix가 같은 가장 긴 문자열의 길이가 새로운 compareIndex가 되게 되는 것입니다.
 
