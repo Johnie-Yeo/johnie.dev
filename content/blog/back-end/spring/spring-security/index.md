@@ -2,12 +2,12 @@
 title: Spring Security Filter
 date: "2022-04-03T22:16:21.000Z"
 description: "spring security filter"
-thumbnail: "./logo.png"
+thumbnail: "./logo.jpeg"
 tags: ["spring security", "spring security filter"]
 ---
 
 
-<p align="center"><img src="./logo.png" style="width:50vw; height:auto;"/></p>
+<p align="center"><img src="./logo.jpeg" style="width:50vw; height:auto;"/></p>
 
 # Spring Security Filter
 
